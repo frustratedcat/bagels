@@ -1,3 +1,4 @@
+from math import asin
 import random
 import os
 
@@ -20,6 +21,15 @@ Here are the rules:
 When I say Pico, that means you guessed a correct digit in the wrong place.
 When I say Fermi, that means you guessed a correct digit in the correct place.
 When I say Bagels, that means your guess did not match any digits.""")
+
+
+def get_random_numbers():
+    rand_one = random.randint(0, 9)
+    rand_two = random.randint(0, 9)
+    rand_three = random.randint(0, 9)
+
+    random_number = [rand_one, rand_two, rand_three]
+    return random_number
 
 
 if __name__ == "__main__":
