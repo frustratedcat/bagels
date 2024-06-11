@@ -43,10 +43,9 @@ def evaluate_guess():
     result = []
 
     random_nums = get_random_numbers()
-    print(random_nums)
 
     while guess_number <= 10:
-        print(f"Guess #{guess_number}")
+        print(f"\nGuess #{guess_number}\n")
 
         player_guess = get_player_guess()
 
@@ -58,19 +57,19 @@ def evaluate_guess():
                     result.append("Pico")
 
         if result == ["Fermi", "Fermi", "Fermi"]:
-            print("You win!")
+            print("\nYou win!")
             break
         elif result == []:
-            print("Bagels")
+            print("\nBagels")
         elif "Pico" in result and "Fermi" in result:
-            print("Fermi Pico")
+            print("\nFermi Pico")
         elif "Pico" in result:
-            print("Pico")
+            print("\nPico")
         elif "Fermi" in result:
-            print("Fermi")
+            print("\nFermi")
 
         if guess_number == 10:
-            print("That's 10 guesses, you lose!")
+            print("\nThat's 10 guesses, you lose!")
             break
         else:
             guess_number += 1
