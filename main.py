@@ -1,10 +1,11 @@
-from math import asin
 import random
 import os
 
 
 def main():
     introduction()
+    print(get_random_numbers())
+    print(get_player_guess())
 
 
 def clear_screen():
@@ -24,12 +25,18 @@ When I say Bagels, that means your guess did not match any digits.""")
 
 
 def get_random_numbers():
-    rand_one = random.randint(0, 9)
-    rand_two = random.randint(0, 9)
-    rand_three = random.randint(0, 9)
-
-    random_number = [rand_one, rand_two, rand_three]
+    random_number = []
+    for i in range(3):
+        random_number.append(random.randint(0, 9))
     return random_number
+
+
+def get_player_guess():
+    player_guesses = []
+    for i in range(3):
+        player_choice = int(input("Guess a number from 0 to 9"))
+        player_guesses.append(player_choice)
+    return player_guesses
 
 
 if __name__ == "__main__":
